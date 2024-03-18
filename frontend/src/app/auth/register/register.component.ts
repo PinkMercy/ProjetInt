@@ -5,11 +5,11 @@ import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css',"../../../assets/css/style.min.css",
+"../../../assets/css/icons.css"]
 })
 export class RegisterComponent {
   registerForm!: FormGroup;
-
   constructor(
     private service: AuthService,
     private fb: FormBuilder
