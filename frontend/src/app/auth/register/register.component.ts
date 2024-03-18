@@ -10,7 +10,6 @@ import { AuthService } from '../service/auth.service';
 })
 export class RegisterComponent {
   registerForm!: FormGroup;
-
   constructor(
     private service: AuthService,
     private fb: FormBuilder

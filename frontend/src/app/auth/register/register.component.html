@@ -36,7 +36,7 @@
               <div class="grid lg:grid-cols-2 gap-10">
                   <div class="hidden lg:block ps-4 py-4">
                       <div class="relative rounded-xl overflow-hidden h-full w-full">
-                          <img src="https://i.pinimg.com/originals/41/fb/ae/41fbae549214865c59882f53464d4c40.jpg" alt="" class="w-full h-full transform -scale-x-100">
+                          <img src="https://www.discoverhongkong.com/content/dam/dhk/intl/what-s-new/events/events-festivals-720x860.jpg" alt="" class="w-full h-full transform -scale-x-100">
                           <div class="absolute inset-0 bg-default-950/40">
                               <div class="flex items-end justify-center h-full">
                                   <div class="p-6 text-start">
@@ -51,7 +51,7 @@
                   <div class="flex flex-col h-full p-10 lg:ps-0">
                       <div class="pb-10">
                           <a href="index.html" class="flex">
-                              <img src="../../../assets/loogo.png" alt="dark logo" class="h-10">
+                              <img src="assets\logoNew.png" alt="dark logo" class="h-10">
                           </a>
                       </div>
                       <div class="pb6 my-auto">
@@ -98,8 +98,8 @@
               </div> <!-- end grid -->
           </div> <!-- end bg -->
           <div class="w-full text-center mt-5">
-              <p class="text-default-300 leading-6 text-base font-medium">Already have an account? <a href="auth-login.html" class="text-primary font-semibold ms-1">Sign In</a></p>
-          <br>
+            <p class="text-default-300 leading-6 text-base font-medium">Already have an account? <a [routerLink]="['/auth/login']" class="text-primary font-semibold ms-1">Sign In</a></p>
+            <br>
           </div>
       </div><!-- end container -->
   </section><!-- end section -->

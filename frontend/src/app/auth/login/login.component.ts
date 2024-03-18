@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css',"../../../assets/css/style.min.css",
+  "../../../assets/css/icons.css"]
 })
 export class LoginComponent {
   loginForm!: FormGroup;
-
   constructor(
     private service: AuthService,
     private fb: FormBuilder,
