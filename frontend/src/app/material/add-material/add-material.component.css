@@ -1,0 +1,15 @@
+.appoinment-area-two {
+    display: flex;
+    justify-content: center; /* Horizontally center the form */
+    align-items: center; /* Vertically center the form */
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items (input and button) vertically */
+}
+
+.input-half {
+    width: 50%;
+}
