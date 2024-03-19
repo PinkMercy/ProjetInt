@@ -81,14 +81,16 @@
                 <div class="col-lg-12">
                     <!-- appoinment area two start -->
                     <div class="appoinment-area-two plr--120 plr_md--40 plr_sm--30">
-                        <form class="appoinment-h2 rts-slide-up-gsap"  #f="ngForm" method="post" (ngSubmit)="onSubmit(f)">
+                        <form class="appoinment-h2 rts-slide-up-gsap" method="post" [formGroup]="updateForm">
                             <div class="input-line">
                                 <div class="input-half">
                                     <label for="libelle">Libelle</label>
-                                    <input id="libelle" type="text" placeholder="Libelle : " required name="libelle" ngModel>
+                                    <input id="libelle" type="text" placeholder="Libelle : " required formControlName="libelle">
                                 </div>
+                                <br>
+                              
                             </div>
-                            <button class="submit-pd">SUBMIT</button>
+                            <button class="submit-pd" (click)="updateMaterial()">SUBMIT</button>
                         </form>
                     </div>
                     <!-- appoinment area two end -->

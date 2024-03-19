@@ -1,10 +1,4 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
-    <title>Mighty - Creative Portfolio Template</title>
-    </head>
 <body class="inner-page">
 <div class="rts-breadcrumb-area bg_image">
     <div class="container">
@@ -31,9 +25,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="service-area-one-main-wrapper">
-                    <button style="font-size: 20px;" type="button" [routerLink]="['/material','add']" class="btn btn-dark">Add new material</button>
+                    <button style="font-size: 20px;" type="button" class="btn btn-dark" [routerLink]="['/material','add']">Add new material</button>
                     <!-- lehna bch ta3ml ng for ala 7assb 9ada mn material -->
-                    <div class="single-item-service-one">
+                <div *ngFor="let m of materials">
+                    <div class="single-item-service-one" >
                         
                             <div class="rts-img-contaciner">
                                 <figure class="list-img">
@@ -41,27 +36,30 @@
                                 </figure>
                             </div>
                             <div class="list-title col-md-6">
-                                <h3>TITLE #</h3>
+                                <h3>{{m.libelle}}</h3>
+                                
                             </div>
                             <div class="list-info col-md-3">
-                                <p class="disc">
-                                    
+                                <p class="disc" *ngIf=m.reserve>
+                                    Materiel reserve
+                                </p>
+                                <p class="disc" *ngIf=!m.reserve>
+                                    Materiel non reserve
                                 </p>
                             </div>
                             <div class="button-area">
                                 
-                                   <button type="button" class="btn btn-light">Update</button>
-                                    <button  type="button" class="btn btn-danger">Delete</button>
+                                   <button type="button" class="btn btn-light"  (click)="deleteMaterial(m.id)" ><i class="fa-regular fa-trash"></i></button>
+                                    <button  type="button" class="btn btn-light" [routerLink]="['/material','edit',m.id]"><i class="fa-regular fa-pen-to-square"></i></button>
                             </div>
                         <a href="portfolio-details.html">
                             
                         </a>
                     </div>
                     
-
-
                     
                 </div>
+            </div>
             </div>
         </div>
     </div>
